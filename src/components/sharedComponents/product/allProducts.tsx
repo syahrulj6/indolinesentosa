@@ -24,7 +24,7 @@ export const Allproducts = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const response = await axios.get(`https://indoline-sentosa.vercel.app/${currentPage}`);
+      const response = await axios.get(`https://indoline-sentosa.vercel.app/api/product/page/${currentPage}`);
       const newProducts = response.data;
       if (newProducts.length === 0) {
         setHasMore(false); // No more data available
