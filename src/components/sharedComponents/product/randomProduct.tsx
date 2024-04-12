@@ -11,7 +11,7 @@ export const RandomProduct = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://indoline-sentosa.vercel.app/api/product');
+        const response = await axios.get('/api/product');
         const data = response.data;
         const randomItems: any = [];
 

@@ -22,11 +22,9 @@ export const Allproducts = () => {
     }
   };
 
-  // pm2 start npm --name indolinesentosa -- start
-
   useEffect(() => {
     const fetchPosts = async () => {
-      const response = await axios.get(`https://indoline-sentosa.vercel.app/api/product/page/${currentPage}`);
+      const response = await axios.get(`/api/product/page/${currentPage}`);
       const newProducts = response.data;
       if (newProducts.length === 0) {
         setHasMore(false); // No more data available

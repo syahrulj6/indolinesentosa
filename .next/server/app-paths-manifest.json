@@ -1,5 +1,5 @@
 {
-  "/products/page": "app/products/page.js",
   "/api/edgestore/[...edgestore]/route": "app/api/edgestore/[...edgestore]/route.js",
-  "/page": "app/page.js"
+  "/products/page": "app/products/page.js",
+  "/api/product/page/[slug]/route": "app/api/product/page/[slug]/route.js"
 }
