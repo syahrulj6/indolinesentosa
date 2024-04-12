@@ -37,6 +37,7 @@ export const Allproducts = () => {
     fetchPosts();
   }, [currentPage]);
 
+  
   return (
     <>
       <div className="grid grid-cols-2 px-2 mb-20 md:grid-cols-4 gap-2 md:gap-5 w-full md:px-28 justify-center  items-center">
