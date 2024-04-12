@@ -1,6 +1,6 @@
 export const authConfig = {
   pages: {
-    signIn: 'https://indoline-sentosa.vercel.app/auth/signin',
+    signIn: '/auth/signin',
   },
   providers: [],
   callbacks: {
@@ -19,9 +19,9 @@ export const authConfig = {
     },
     authorized({ auth, request }: { auth: any; request: any }) {
       const user = auth?.user;
-      const isOnAdminPanel = request.nextUrl?.pathname.startsWith('https://indoline-sentosa.vercel.app/adminform/form/admin');
-      const isOnSigninPage = request.nextUrl?.pathname.startsWith('https://indoline-sentosa.vercel.app/auth/signin');
-      const isOnSignupPage = request.nextUrl?.pathname.startsWith('https://indoline-sentosa.vercel.app/auth/signup');
+      const isOnAdminPanel = request.nextUrl?.pathname.startsWith('/adminform/form/admin');
+      const isOnSigninPage = request.nextUrl?.pathname.startsWith('/auth/signin');
+      const isOnSignupPage = request.nextUrl?.pathname.startsWith('/auth/signup');
 
       // ONLY ADMIN CAN REACH THE ADMIN DASHBOARD
 
@@ -31,11 +31,11 @@ export const authConfig = {
       // ONLY UNAUTHENTICATED USERS CAN REACH THE LOGIN PAGE
 
       if (isOnSigninPage && user) {
-        return Response.redirect(new URL('https://indoline-sentosa.vercel.app/', request.nextUrl));
+        return Response.redirect(new URL('/', request.nextUrl));
       }
 
       if (isOnSignupPage && user) {
-        return Response.redirect(new URL('https://indoline-sentosa.vercel.app/', request.nextUrl));
+        return Response.redirect(new URL('/', request.nextUrl));
       }
 
       return true;

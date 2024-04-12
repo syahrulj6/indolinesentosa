@@ -24,7 +24,7 @@ const AdminPage = async () => {
         </div>
       ) : (
         <Button asChild>
-          <Link href={'https://indoline-sentosa.com/auth/signin'}>Sign in</Link>
+          <Link href={'/auth/signin'}>Sign in</Link>
         </Button>
       )}
     </div>

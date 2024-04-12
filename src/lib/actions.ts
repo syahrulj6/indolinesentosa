@@ -28,7 +28,7 @@ export const addProduct = async (prevState: any, formData: any) => {
 
     await newProduct.save();
     console.log('saved to db');
-    revalidatePath('https://indoline-sentosa.vercel.app/adminform/form/admin');
+    revalidatePath('/adminform/form/admin');
   } catch (err) {
     console.log(err);
     return { error: 'Something went wrong!' };
@@ -43,7 +43,7 @@ export const deleteProduct = async (formData: any) => {
 
     await Product.findByIdAndDelete(id);
     console.log('deleted from db');
-    revalidatePath('https://indoline-sentosa.vercel.app/adminform/form/admin');
+    revalidatePath('/adminform/form/admin');
   } catch (err) {
     console.log(err);
     return { error: 'Something went wrong!' };
@@ -64,7 +64,7 @@ export const addAdmin = async (prevState: any, formData: any) => {
 
     await newUser.save();
     console.log('saved to db');
-    revalidatePath('https://indoline-sentosa.vercel.app/adminform/form/admin');
+    revalidatePath('/adminform/form/admin');
   } catch (err) {
     console.log(err);
     return { error: 'Something went wrong!' };
@@ -80,7 +80,7 @@ export const deleteAdmin = async (formData: any) => {
     await Product.deleteMany({ userId: id });
     await Admin.findByIdAndDelete(id);
     console.log('deleted from db');
-    revalidatePath('https://indoline-sentosa.vercel.app/adminform/form/admin');
+    revalidatePath('/adminform/form/admin');
   } catch (err) {
     console.log(err);
     return { error: 'Something went wrong!' };
