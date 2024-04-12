@@ -22,6 +22,8 @@ export const Allproducts = () => {
     }
   };
 
+  // pm2 start npm --name indolinesentosa -- start
+
   useEffect(() => {
     const fetchPosts = async () => {
       const response = await axios.get(`https://indoline-sentosa.vercel.app/api/product/page/${currentPage}`);
@@ -37,7 +39,6 @@ export const Allproducts = () => {
     fetchPosts();
   }, [currentPage]);
 
-  
   return (
     <>
       <div className="grid grid-cols-2 px-2 mb-20 md:grid-cols-4 gap-2 md:gap-5 w-full md:px-28 justify-center  items-center">
