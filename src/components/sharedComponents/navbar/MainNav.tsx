@@ -14,7 +14,7 @@ export const MainNav = async () => {
           {session?.user && (
             <div className="flex gap-2 w-full">
               <Button className="flex-1" asChild size={'sm'}>
-                <Link href={'https://indoline-sentosa.vercel.app/adminform/form/admin'}>Add product</Link>
+                <Link href={'/adminform/form/admin'}>Add product</Link>
               </Button>
               <form action={handleLogout}>
                 <Button className="flex-1" variant={'destructive'} size={'sm'}>
@@ -31,7 +31,7 @@ export const MainNav = async () => {
         {session?.user && (
           <div className="flex gap-2 w-full">
             <Button className="flex-1" asChild size={'sm'}>
-              <Link href={'https://indoline-sentosa.vercel.app/adminform/form/admin'}>Add product</Link>
+              <Link href={'/adminform/form/admin'}>Add product</Link>
             </Button>
             <form action={handleLogout}>
               <Button className="flex-1" variant={'destructive'} size={'sm'}>
