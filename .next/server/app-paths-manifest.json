@@ -1,1 +1,6 @@
-{}
+{
+  "/page": "app/page.js",
+  "/api/product/route": "app/api/product/route.js",
+  "/[slug]/page": "app/[slug]/page.js",
+  "/api/edgestore/[...edgestore]/route": "app/api/edgestore/[...edgestore]/route.js"
+}
